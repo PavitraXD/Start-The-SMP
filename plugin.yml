@@ -1,5 +1,5 @@
 name: StartTheSMP
-version: 1.0.0
+version: 2.0.0
 main: com.smpstart.SMPStartPlugin
 api-version: '1.21'
 author: YourName
