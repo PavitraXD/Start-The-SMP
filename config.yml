@@ -1,0 +1,124 @@
+# Start The SMP - Configuration
+# All settings are hot-reloadable with /reload
+
+# Countdown Settings
+countdown:
+  # Duration in seconds for the countdown
+  duration: 10
+  # Show countdown in action bar (true) or title (false)
+  use-actionbar: false
+
+# World Border Settings
+world-border:
+  # Initial size when SMP starts (small border)
+  initial-size: 50.0
+  # Final size after expansion (large border)
+  final-size: 5000.0
+  # Time in seconds for border expansion
+  expansion-duration: 300
+  # World to apply border to (leave empty for main world)
+  world-name: ""
+
+# Title Settings
+titles:
+  # Starting title configuration
+  start-title:
+    title: "§c§lSMP IS STARTING"
+    subtitle: "§7Get ready for the adventure!"
+    fade-in: 10
+    stay: 40
+    fade-out: 10
+  
+  # Countdown title configuration (when not using action bar)
+  countdown-title:
+    title: "§e§l{time}"
+    subtitle: "§7seconds remaining..."
+    fade-in: 0
+    stay: 25
+    fade-out: 5
+  
+  # Started title configuration
+  started-title:
+    title: "§a§lSMP STARTED"
+    subtitle: "§7Good luck, have fun!"
+    fade-in: 10
+    stay: 60
+    fade-out: 20
+
+# Action Bar Settings (when use-actionbar is true)
+actionbar:
+  countdown-message: "§e§lCountdown: §f{time} §7seconds remaining"
+
+# Sound Settings
+sounds:
+  # Play sound when SMP starts
+  enabled: true
+  # Sound to play (Paper 1.21.X sound names)
+  sound: "ENTITY_WITHER_SPAWN"
+  # Volume (0.0 to 1.0)
+  volume: 0.8
+  # Pitch (0.5 to 2.0)
+  pitch: 0.8
+
+# Messages
+messages:
+  # Console messages
+  console:
+    smp-started: "SMP has been officially started by {player}!"
+    already-started: "SMP start command was attempted but SMP is already active."
+    config-reloaded: "Start The SMP configuration reloaded successfully."
+  
+  # Player messages
+  player:
+    smp-already-started: "§cThe SMP has already been started!"
+    smp-starting: "§aStarting SMP countdown..."
+    no-permission: "§cYou don't have permission to start the SMP!"
+    phase-starting: "§aSwitched to §fStarting §aphase!"
+    phase-started: "§cSwitched to §fStarted §cphase!"
+    pvp-countdown: "§ePvP will be enabled in §f{time} §eseconds!"
+    pvp-enabled: "§c§lPvP HAS BEEN ENABLED!"
+    block-break-denied: "§cBlock breaking is disabled in the starting phase!"
+    smp-reset: "§a§lSMP HAS BEEN RESET!"
+
+# Phase Settings
+phases:
+  # Starting phase (peaceful, before SMP officially starts)
+  starting:
+    border-size: 50.0
+    difficulty: "PEACEFUL"
+    gamemode: "SURVIVAL"
+    allow-block-breaking: false
+    allow-mob-spawning: false
+
+  # Started phase (normal gameplay)
+  started:
+    border-size: 5000.0
+    difficulty: "NORMAL"
+    gamemode: "SURVIVAL"
+
+# PvP Settings
+pvp:
+  countdown-enabled: true
+  countdown-duration: 1800
+
+# Effects Settings
+effects:
+  fireworks:
+    enabled: true
+    count: 10
+
+  rainbow-particles:
+    enabled: true
+
+  border-particles:
+    enabled: true
+
+  multi-layered-sound:
+    enabled: true
+
+# Plugin Settings
+plugin:
+  # Prevent multiple uses of the command
+  single-use: true
+  # Log detailed information to console
+  debug-logging: true
